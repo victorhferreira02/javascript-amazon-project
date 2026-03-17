@@ -1,4 +1,4 @@
-import { getCartQuantity } from "../../../data/cart.js";
+import { getCartQuantity } from "../../data/cart.js";
 
 export function renderCheckoutHeader() {
   const quantity = getCartQuantity();

@@ -1,7 +1,8 @@
-import { renderOrderSummary } from "./utils/checkout/orderSummary.js";
-import { renderPaymentSummary } from "./utils/checkout/paymentSummary.js";
-import { renderCheckoutHeader } from "./utils/checkout/checkoutHeader.js";
+import { renderOrderSummary } from "./checkout/orderSummary.js";
+import { renderPaymentSummary } from "./checkout/paymentSummary.js";
+import "../data/cart-oop.js";
+import { renderCheckoutHeader } from "./checkout/checkoutHeader.js";
 
-renderCheckoutHeader();
 renderOrderSummary();
 renderPaymentSummary();
+renderCheckoutHeader();
