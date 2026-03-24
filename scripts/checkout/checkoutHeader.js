@@ -1,7 +1,10 @@
-import { getCartQuantity } from "../../data/cart.js";
+import { cart } from "../../data/cart-class.js";
+
+const quantity = cart.cartItems.reduce((total, item) => {
+  return total + item.quantity;
+}, 0);
 
 export function renderCheckoutHeader() {
-  const quantity = getCartQuantity();
   const checkoutHeaderHTML = `
   <div class="checkout-header">
       <div class="header-content">

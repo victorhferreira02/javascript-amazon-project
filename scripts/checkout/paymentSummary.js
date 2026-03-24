@@ -7,7 +7,9 @@ import { formatCurrency } from "../utils/money.js";
 export function renderPaymentSummary() {
   let productPriceCents = 0;
   let shippingPriceCents = 0;
-  const quantity = getCartQuantity();
+  const quantity = cart.cartItems.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
 
   cart.cartItems.forEach((cartItem) => {
     const product = getProduct(cartItem.productId);
